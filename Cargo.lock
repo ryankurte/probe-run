@@ -483,13 +483,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "libftdi1-source-lgpl"
+version = "1.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9a832a34a53546236e58839ea4f962fc714e6c31bdb722abb0e9e91218961a7d"
+
+[[package]]
 name = "libftdi1-sys"
 version = "1.0.0-alpha3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1b362baf5161887215d5c66fc697ff94528fba8d80518deab2fe3a75817c408e"
 dependencies = [
+ "cc",
  "cfg-if",
  "libc",
+ "libftdi1-source-lgpl",
  "pkg-config",
  "vcpkg",
 ]
@@ -646,6 +654,7 @@ dependencies = [
  "elf2table",
  "env_logger",
  "gimli",
+ "libftdi1-sys",
  "log",
  "object",
  "probe-rs",

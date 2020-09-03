@@ -26,6 +26,10 @@ rustc-demangle = "0.1.16"
 structopt = "0.3.15"
 object = "0.21.1"
 
+# probe-rs dependency. We want this to be built from source instead of linking against the system's
+# installation (which likely does not exist).
+libftdi1-sys = { version = "1.0.0-alpha3", features = ["vendored"] }
+
 [features]
 defmt = ["elf2table", "decoder"]
 
